@@ -1,16 +1,1 @@
-# ArcanaCraft
-
-Магический мод для Minecraft Forge 1.20.1.
-
-Включает:
-- Древо магии
-- Добрую магию и некромантию
-- Руны и специальные зачарования
-- Тёмную броню
-- Ритуалы и жертвоприношения
-- Измерения + секретное
-- Книгу с найденными страницами
-- Концовки с кат-сценами
-- ∞ уровень маны и Codex Infinitum
-
-Это проект-скелет для доработки и сборки в IDE (IntelliJ IDEA).
+name: Build Mod  on:   push:     branches: [ "main" ]  jobs:   build:     runs-on: ubuntu-latest      steps:       - uses: actions/checkout@v3        - name: Set up JDK 17         uses: actions/setup-java@v3         with:           java-version: '17'           distribution: 'temurin'        - name: Grant execute permission         run: chmod +x gradlew        - name: Build         run: ./gradlew build        - name: Upload jar         uses: actions/upload-artifact@v3         with:           name: ArcanaCraft           path: build/libs/*.jar
