@@ -1,0 +1,12 @@
+
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="arcanacraft"
+version="1.0.0"
+displayName="ArcanaCraft"
+description='''
+Магический мод с тайными концовками.
+'''
